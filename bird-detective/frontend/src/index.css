@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.05rem;
+    background-color: #f5f0e8;
+    color: #2c2416;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Fredoka One', cursive; }
+  .font-body    { font-family: 'Nunito', sans-serif; }
+  .font-ui      { font-family: 'DM Sans', sans-serif; }
+
+  .paper {
+    background: #fffdf7;
+    border: 1.5px solid #d4c9a8;
+    box-shadow: 2px 3px 0px rgba(0,0,0,0.06);
+  }
+  .paper-warm {
+    background: #fdf8ee;
+    border: 1.5px solid #d4c9a8;
+  }
+
+  .glow-gold   { box-shadow: 0 2px 12px rgba(180,140,0,0.25); }
+  .glow-rare   { box-shadow: 0 2px 12px rgba(180,80,20,0.2); }
+  .glow-green  { box-shadow: 0 2px 8px rgba(40,110,60,0.15); }
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #ede6d4; }
+::-webkit-scrollbar-thumb { background: #b8a880; border-radius: 3px; }
+
+.legendary-border {
+  border: 2px solid #c9980a;
+  box-shadow: 0 0 0 3px rgba(201,152,10,0.15), 2px 3px 0 rgba(0,0,0,0.06);
+}
+.rare-border {
+  border: 2px solid #b85c20;
+  box-shadow: 0 0 0 3px rgba(184,92,32,0.12), 2px 3px 0 rgba(0,0,0,0.06);
+}
+
+.bird-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.bird-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 6px 0px rgba(0,0,0,0.1);
+}
+
+.live-item { animation: liveSlideIn 0.35s ease-out; }
+@keyframes liveSlideIn {
+  from { transform: translateX(20px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes cardAppear {
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes achievementPop {
+  0%   { transform: translateY(16px) scale(0.95); opacity: 0; }
+  60%  { transform: translateY(-2px) scale(1.02); opacity: 1; }
+  100% { transform: translateY(0)    scale(1);    opacity: 1; }
+}
+.achievement-appear { animation: achievementPop 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+
+.confidence-fill { transition: width 0.8s ease; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes confettiFall {
+  0%   { transform: translateY(-10px) rotate(0deg);   opacity: 1; }
+  100% { transform: translateY(80px)  rotate(360deg); opacity: 0; }
+}
+
+.sketch-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sketch-divider {
+  border: none;
+  border-top: 1.5px dashed #c8bfa0;
+  margin: 0;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+.dot-pulse { animation: dotPulse 1.8s ease-in-out infinite; }
+
+@keyframes radarSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.radar-spin { animation: radarSpin 6s linear infinite; }
+
+/* Birthday popup sparkle */
+@keyframes sparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  50%       { transform: scale(1.3) rotate(20deg); opacity: 0.8; }
+}
