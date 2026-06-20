@@ -8,7 +8,7 @@ In this setup, a **Raspberry Pi 3A+ with a USB webcam** provides a continuous au
 
 You could equally run BirdNET-Go directly on a remote **Raspberry Pi 4 or 5** (with a microphone attached) and host the Garden Birds frontend locally or on a separate machine — the two services just need to be able to reach each other over your network.
 
-![Garden Birds Screenshot](https://raw.githubusercontent.com/birdnet-team/BirdNET-Analyzer-Sierra/refs/heads/main/gui/img/birdnet_logo.png)
+![Garden Birds Screenshot](https://raw.githubusercontent.com/Taidgh/Garden-Birds/refs/heads/main/bird-detective/frontend/public/favicon.png)
 
 ---
 
