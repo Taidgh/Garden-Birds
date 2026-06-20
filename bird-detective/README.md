@@ -1,8 +1,12 @@
 # 🐦 Garden Birds
 
-> A real-time garden bird detection dashboard powered by [BirdNET-Go](https://github.com/tphakala/birdnet-go)
+> A child-friendly frontend for [BirdNET-Go](https://github.com/tphakala/birdnet-go)
 
-Built for backyard bird enthusiasts — displays live detections, rarity scoring, species facts, audio playback and a full species archive. Designed to run on Proxmox alongside a BirdNET-Go LXC.
+Garden Birds is a more visual, accessible interface for BirdNET-Go — designed to make real-time bird detection fun and easy to understand for kids and families.
+
+In this setup, a **Raspberry Pi 3A+ with a USB webcam** provides a continuous audio stream over the local network. Both **BirdNET-Go** and the **Garden Birds dashboard** run as separate LXC containers on a single **Proxmox** machine, with BirdNET-Go consuming the Pi's audio stream and Garden Birds reading from the BirdNET-Go API.
+
+You could equally run BirdNET-Go directly on a remote **Raspberry Pi 4 or 5** (with a microphone attached) and host the Garden Birds frontend locally or on a separate machine — the two services just need to be able to reach each other over your network.
 
 ![Garden Birds Screenshot](https://raw.githubusercontent.com/birdnet-team/BirdNET-Analyzer-Sierra/refs/heads/main/gui/img/birdnet_logo.png)
 
@@ -127,7 +131,7 @@ Edit `.env`:
 ```env
 BIRDNET_URL=http://192.168.1.70:8080   # Replace with your BirdNET-Go LXC IP
 ADMIN_USER=admin
-ADMIN_PASS=your_secure_password
+ADMIN_PASS=Change-This-Password
 ```
 
 ```bash

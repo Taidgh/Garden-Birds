@@ -10,7 +10,7 @@ app.use(express.json());
 
 const cache = new NodeCache({ stdTTL: 30 });
 
-const ADMIN_USER = process.env.ADMIN_USER || 'Admin';
+const ADMIN_USER = process.env.ADMIN_USER || 'taidgh';
 const ADMIN_PASS = process.env.ADMIN_PASS || 'Change-This-Password';
 
 function requireAuth(req, res, next) {
@@ -460,7 +460,7 @@ app.get('/api/audio/:id(*)', async (req, res) => {
 
 // Public: frontend reads these on load
 app.get('/api/settings', (req, res) => res.json({
-  siteTitle:  appSettings.siteTitle  || "Ruairí's Garden",
+  siteTitle:  appSettings.siteTitle  || "My Kid's Garden",
   birdnetUrl: appSettings.birdnetUrl || BIRDNET_BASE,
   facts:      appSettings.facts      || [],
   birdFacts:  appSettings.birdFacts  || {},

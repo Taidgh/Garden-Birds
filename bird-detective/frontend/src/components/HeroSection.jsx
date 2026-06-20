@@ -1,7 +1,7 @@
 import { formatTimeAgo } from '../utils/helpers';
 
 export default function HeroSection({ stats, lastUpdated, onRefresh, loading, siteTitle }) {
-  const title = siteTitle || "Ruairí's Garden";
+  const title = siteTitle || "My Kid's Garden";
   // Split title into two parts for display — last word gets moss colour
   const words = title.trim().split(' ');
   const lastWord = words.pop();
@@ -11,10 +11,9 @@ export default function HeroSection({ stats, lastUpdated, onRefresh, loading, si
     <div className="relative py-8 md:py-10">
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 mb-6">
         <img
-          src="https://raw.githubusercontent.com/birdnet-team/BirdNET-Analyzer-Sierra/refs/heads/main/gui/img/birdnet_logo.png"
-          alt="BirdNET Logo"
+          src="/favicon.png"
+          alt="Garden Birds Logo"
           className="h-14 md:h-16 object-contain flex-shrink-0"
-          onError={e => { e.target.style.display = 'none'; }}
         />
         <div className="text-center sm:text-left">
           <h1 className="font-display text-4xl md:text-5xl text-ink-dark leading-none">

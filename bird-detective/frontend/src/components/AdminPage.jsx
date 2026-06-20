@@ -58,7 +58,7 @@ function LoginForm({ onLogin }) {
         <div className="text-center mb-6">
           <div className="text-5xl mb-2">🔐</div>
           <h1 className="font-display text-2xl text-ink-dark">Admin Login</h1>
-          <p className="font-ui text-sm text-ink-faint mt-1">Garden Birds</p>
+          <p className="font-ui text-sm text-ink-faint mt-1">My Kid's Garden</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

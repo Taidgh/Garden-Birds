@@ -13,7 +13,7 @@ services:
       - PORT=3001
       - BIRDNET_URL=http://192.168.1.70:8080
       - POLL_INTERVAL=30000
-      - ADMIN_USER=Admin
+      - ADMIN_USER=taidgh
       - ADMIN_PASS=Change-This-Password
       - BIRD_SECRET=c05a442eea384fbdbce7b0960ebd4010af9601d9173cdfc5c891511a9c2cf796
     volumes:

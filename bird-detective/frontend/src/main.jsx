@@ -21,7 +21,7 @@ if (isAdmin) {
 }
 
 function SpeciesWrapper() {
-  const [siteTitle, setSiteTitle] = React.useState("Ruairí's Garden");
+  const [siteTitle, setSiteTitle] = React.useState("My Kid's Garden");
   React.useEffect(() => {
     fetch('/api/settings').then(r => r.json()).then(d => {
       if (d.siteTitle) setSiteTitle(d.siteTitle);

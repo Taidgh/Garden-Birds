@@ -105,20 +105,23 @@ export default function StatsDashboard({ stats }) {
         </div>
       </div>
 
-      {/* First time detected */}
+      {/* New Birds Found — full cards, above rarest today */}
       {newSpeciesData?.length > 0 && (
-        <div className="paper rounded-xl p-4" style={{ border:'1.5px solid #4a674144' }}>
-          <div className="flex items-center gap-2 mb-3">
-            <span className="font-ui font-semibold text-moss text-sm">🆕 First time ever detected</span>
+        <div className="paper rounded-xl p-4" style={{ border: '2px solid #4a674166' }}>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-xl">🆕</span>
+            <div>
+              <span className="font-display text-xl text-moss">New Birds Found!</span>
+              <p className="font-ui text-sm text-ink-faint mt-0.5">
+                {newSpeciesData.length === 1
+                  ? 'A species detected for the very first time'
+                  : `${newSpeciesData.length} species detected for the very first time`}
+              </p>
+            </div>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {newSpeciesData.map(bird => (
-              <button key={bird.id} onClick={() => setModalBird(bird)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-moss/10 hover:bg-moss/20 border border-moss/20 transition-colors">
-                <span>{getBirdEmoji(bird.species)}</span>
-                <span className="font-ui text-sm text-moss font-semibold">{bird.species}</span>
-                <span className="font-ui text-sm text-moss/70">→</span>
-              </button>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3">
+            {newSpeciesData.map((bird, i) => (
+              <BirdCard key={bird.id || i} detection={bird} index={i} />
             ))}
           </div>
         </div>

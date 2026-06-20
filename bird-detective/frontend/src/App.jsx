@@ -50,7 +50,7 @@ export default function App() {
   const { detections, stats, species, loading, error, lastUpdated, newDetections, refetch } = useDetections();
   const [activeFilter, setActiveFilter] = useState('all');
   const [sortBy, setSortBy] = useState('rarity');
-  const [siteTitle, setSiteTitle] = useState("Ruairí's Garden");
+  const [siteTitle, setSiteTitle] = useState("My Kid's Garden");
 
   useEffect(() => {
     fetch('/api/settings')
@@ -183,9 +183,7 @@ export default function App() {
 
           <footer className="border-t border-cream py-8 text-center">
             <div className="flex justify-center items-center gap-3 mb-2">
-              <img src="https://raw.githubusercontent.com/birdnet-team/BirdNET-Analyzer-Sierra/refs/heads/main/gui/img/birdnet_logo.png"
-                alt="BirdNET" className="h-7 object-contain opacity-40"
-                onError={e => { e.target.style.display = 'none'; }}/>
+              <img src="/favicon.png" alt="Garden Birds" className="h-7 object-contain opacity-60" />
               <span className="font-ui text-ink-faint text-base">{siteTitle}</span>
             </div>
             <p className="font-ui text-sm text-ink-faint">

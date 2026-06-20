@@ -4,7 +4,7 @@ const path = require('path');
 const SETTINGS_FILE = path.join(__dirname, 'data', 'settings.json');
 
 const DEFAULTS = {
-  siteTitle:  "Ruairí's Garden",
+  siteTitle:  "My Kid's Garden",
   birdnetUrl: 'http://192.168.1.70:8080',
   facts: [
     "Eagles can see up to 8x better than humans!",

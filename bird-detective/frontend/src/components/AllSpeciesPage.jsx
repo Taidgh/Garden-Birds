@@ -169,9 +169,8 @@ export default function AllSpeciesPage({ siteTitle }) {
               </p>
             </div>
             <img
-              src="https://raw.githubusercontent.com/birdnet-team/BirdNET-Analyzer-Sierra/refs/heads/main/gui/img/birdnet_logo.png"
-              alt="BirdNET" className="h-12 object-contain opacity-50"
-              onError={e => { e.target.style.display = 'none'; }} />
+              src="/favicon.png"
+              alt="Garden Birds" className="h-12 object-contain opacity-60" />
           </div>
 
           {/* Controls */}
